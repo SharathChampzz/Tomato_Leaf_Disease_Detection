@@ -4,12 +4,10 @@ import warnings
 warnings.simplefilter("ignore")
 import tensorflow as tf
 tf.compat.v1.disable_eager_execution()
-##import keras
 from tensorflow.python.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.python.keras.optimizers import Adam
 from sklearn.model_selection import train_test_split
 from tensorflow.python.keras.preprocessing.image import img_to_array
-##from tensorflow.python.keras.utils import to_categorical
 from tensorflow.python.keras.utils.np_utils import to_categorical
 from pyimagesearch.lenet import LeNet
 from imutils import paths
@@ -19,18 +17,19 @@ import random
 import cv2
 import os
 import time
-##from preprocessing.segEdgeDetection import PreProcess
 
 
 ## Expected Changes
-resolution = 75
-dataSet = r'M:\pythonD\PlantVillageFullDataBase\Tomato'
-##dataSet = r"M:\pythonD\Delete"
+resolution = 75 # Change resolution of image based on your interest
+dataSet = r'M:\pythonD\PlantVillageFullDataBase\Tomato'  # Data set Location
+
+
 EPOCHS = 25
+
+
 
 # initialize the number of epochs to train for, initia learning rate,
 # and batch size
-
 INIT_LR = 1e-3
 BS = 32
 
@@ -68,12 +67,7 @@ for imagePath in imagePaths:
         try:
                 image = cv2.imread(imagePath)
                 image = cv2.resize(image, (heightt, widthh))
-##                image = PreProcess.segEdge(image)
                 image = img_to_array(image)
-##                image = cv2.fastNlMeansDenoisingColored(image, None, 10, 10, 7, 15)
-        ##	print(imagePath)
-                # extract the class label from the image path and update the
-                # labels list
                 lbl = imagePath.split(os.path.sep)[-2]
                 label = cnames.index(lbl);
                 data.append(image)
@@ -81,7 +75,6 @@ for imagePath in imagePaths:
         except Exception as e:
                 imageFailed += 1
                 print(f'Images Failed To Load  Count = {imageFailed}')
-##                print(f'Please Delete this File / Image  : {imagePath}')
                 print(e)
 print('List OF data and labels are created')	
 print(f'Data : {len(data)}')	
