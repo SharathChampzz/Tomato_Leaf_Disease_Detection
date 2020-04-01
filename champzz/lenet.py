@@ -5,7 +5,6 @@ from tensorflow.python.keras.layers.convolutional import Conv2D , MaxPooling2D
 ##from keras.layers.convolutional import MaxPooling2D
 from tensorflow.python.keras.layers.core import Activation , Flatten , Dense
 ##from keras.layers.core import Flatten
-##from keras.layers.core import Dense
 from tensorflow.python.keras import backend as K
 from tensorflow.python.keras.layers import Dropout, BatchNormalization
 
