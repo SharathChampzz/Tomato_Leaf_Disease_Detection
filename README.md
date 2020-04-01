@@ -8,4 +8,8 @@ To train the Model:
  run the program
  
 
-To test the model Run test_network.py Give trained data set link inside the code.
+To test the model Run test_network.py 
+
+Give trained data set link inside the code.
+Give Trained Model adress.
+Give Testing Image.
