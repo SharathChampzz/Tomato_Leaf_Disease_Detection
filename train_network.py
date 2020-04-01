@@ -9,7 +9,7 @@ from tensorflow.python.keras.optimizers import Adam
 from sklearn.model_selection import train_test_split
 from tensorflow.python.keras.preprocessing.image import img_to_array
 from tensorflow.python.keras.utils.np_utils import to_categorical
-from pyimagesearch.lenet import LeNet
+from champzz.lenet import LeNet
 from imutils import paths
 import matplotlib.pyplot as plt
 import numpy as np
@@ -114,13 +114,9 @@ H = model.fit(aug.flow(trainX, trainY, batch_size=BS),
 # save the model to disk
 print("[INFO] serializing network...")
 t = time.time()
-try:
-    export_path = "/tmp/saved_models/{}".format(int(t))
-    export_saved_model(model, export_path)
-except Exception as e:
-    print('Saving Alternatively...')
-    model.save("LeafDisease.h5")
-    print('Saved')
+
+model.save("LeafDisease.h5")
+print('Saved')
 ##model.save(modelName)
 print('Saved..!')
 # plot the training loss and accuracy
