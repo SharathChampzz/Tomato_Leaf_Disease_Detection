@@ -15,7 +15,7 @@ tensorflow-tensorboard==1.5.1
 tf-estimator-nightly==1.14.0.dev2019060501
 tflearn==0.3.2
 
-Someother Modules Related to Deep Learning [But Not Used Here]
+Someother Modules Related to Deep Learning [Not required for current project]
 pandas==0.25.3
 pickleshare==0.7.5
 Pillow==7.0.0
