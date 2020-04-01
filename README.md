@@ -1,5 +1,5 @@
 # Tomato_Leaf_Disease_Detection
-Tomato leaf disease detection using keras 
+Tomato leaf disease detection using TensorFlow 
 
  To get Proper result Install Packages as given "PackagesInstalled.txt"
  
